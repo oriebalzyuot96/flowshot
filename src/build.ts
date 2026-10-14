@@ -3,7 +3,7 @@ import path from 'node:path'
 import { emitFlow } from './emit.js'
 import { inferFlow } from './infer.js'
 import { parseHar } from './parse-har.js'
-import type { BuildResult, Framework } from './types.js'
+import { FRAMEWORKS, type BuildResult, type Framework } from './types.js'
 
 export type BuildOptions = {
   harPath: string
@@ -36,7 +36,7 @@ export function buildFlow(options: BuildOptions): BuildResult {
 }
 
 function parseFramework(value: string | undefined): Framework {
-  if (value === undefined || value === 'react') return 'react'
-  if (value === 'angular') return 'angular'
-  throw new Error('framework must be react or angular')
+  if (value === undefined) return 'react'
+  if ((FRAMEWORKS as readonly string[]).includes(value)) return value as Framework
+  throw new Error(`framework must be ${FRAMEWORKS.join(', ')}`)
 }

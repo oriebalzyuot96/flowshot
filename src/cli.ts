@@ -5,7 +5,7 @@ import { serveMcp } from './mcp.js'
 const HELP = `Flowshot turns one HAR capture into a component and the evidence behind it.
 
 Usage
-  flowshot build <file.har> [--out dir] [--name Name] [--framework react|angular]
+  flowshot build <file.har> [--out dir] [--name Name] [--framework react|angular|svelte|astro]
   flowshot mcp
 
 The HAR has to be one you exported yourself, with response content

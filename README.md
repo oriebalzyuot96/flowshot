@@ -19,7 +19,7 @@ That sample capture contains a session cookie and a bearer token. Neither is cop
 | `evidence.md` | The calls that were kept, with status, timing, and response shapes |
 | `flow.json` | The same findings for an agent |
 | `api.ts` | A fetch function per call |
-| `NotesSearch.tsx` or `notes-search.component.ts` | A form and a result list |
+| `NotesSearch.tsx`, `notes-search.component.ts`, `NotesSearch.svelte`, or `NotesSearch.astro` | A form and a result list |
 
 The component only calls endpoints that were in the HAR. If a field is missing from one of the recorded rows, the generated type marks it optional. In the sample, `updatedAt` is optional because the second note did not have it.
 
@@ -34,7 +34,7 @@ The component only calls endpoints that were in the HAR. If a field is missing f
 node dist/cli.js build ./my-flow.har --out ./generated --name ProjectSearch --framework angular
 ```
 
-`--framework` is `react` (the default) or `angular`.
+`--framework` is `react` (the default), `angular`, `svelte`, or `astro`.
 
 ## Use it from an agent
 
@@ -67,7 +67,7 @@ A request is kept when it is XHR or fetch, returns JSON, or hits a path containi
 
 ## Roadmap
 
-1. **Now.** HAR in, evidence and a React or Angular component out.
+1. **Now.** HAR in, evidence and a React, Angular, Svelte, or Astro component out.
 2. **Next.** Playwright traces and the Chrome recorder JSON, on the same evidence format.
 3. **Then.** A screenshot you supply, aligned to the same timeline, so an agent can match the layout to the calls.
 4. **Setup.** `npx flowshot setup` registers the MCP server with Cursor and the other local agents.

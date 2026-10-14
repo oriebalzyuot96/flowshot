@@ -19,7 +19,7 @@ node dist/cli.js build examples/notes-search.har --out examples/notes-search --n
 | `evidence.md` | الطلبات اللي انحفظت، مع الحالة والوقت وشكل الرد |
 | `flow.json` | نفس النتيجة بصيغة يقراها الوكيل |
 | `api.ts` | دالة `fetch` لكل طلب |
-| المكوّن | فورم ونتيجة، React أو Angular |
+| المكوّن | فورم ونتيجة: React أو Angular أو Svelte أو Astro |
 
 المكوّن ما بينادي غير العناوين اللي كانت بالتسجيل. إذا حقل ناقص من أحد الصفوف، النوع بيعلمه اختياري.
 
@@ -34,7 +34,7 @@ node dist/cli.js build examples/notes-search.har --out examples/notes-search --n
 node dist/cli.js build ./my-flow.har --out ./generated --name ProjectSearch --framework angular
 ```
 
-`--framework` هو `react` (الافتراضي) أو `angular`.
+`--framework` هو `react` (الافتراضي) أو `angular` أو `svelte` أو `astro`.
 
 ## مع الوكيل
 

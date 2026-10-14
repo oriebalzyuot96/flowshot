@@ -96,7 +96,7 @@ function toolSchema(): Record<string, unknown> {
         harPath: { type: 'string', description: 'Absolute path to a HAR file exported with response content.' },
         outDir: { type: 'string', description: 'Directory where evidence.md, flow.json, api.ts, and the component are written.' },
         name: { type: 'string', description: 'PascalCase component name, such as NotesSearch.' },
-        framework: { type: 'string', enum: ['react', 'angular'] },
+        framework: { type: 'string', enum: ['react', 'angular', 'svelte', 'astro'] },
       },
     },
   }

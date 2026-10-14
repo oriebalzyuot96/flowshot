@@ -60,10 +60,27 @@ test('Angular output drops a password from the request body', () => {
   assert.match(combined, /this\.resultText =/)
 })
 
+test('Svelte and Astro components call the captured endpoint', () => {
+  const expectations = [
+    ['svelte', 'NotesSearch.svelte', /\$state/],
+    ['astro', 'NotesSearch.astro', /<form id="notes-search">/],
+  ]
+  for (const [framework, file, marker] of expectations) {
+    const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'flowshot-'))
+    const built = buildFlow({ harPath, outDir, name: 'NotesSearch', framework })
+    const source = fs.readFileSync(path.join(outDir, file), 'utf8')
+    assert.equal(built.files.includes(file), true)
+    assert.match(source, /getNotes/)
+    assert.match(source, marker)
+    assert.equal(source.includes('super-secret-token-do-not-leak'), false)
+    assert.equal(source.includes('super-secret-session'), false)
+  }
+})
+
 test('an unknown framework is rejected', () => {
   assert.throws(
     () => buildFlow({ harPath, outDir: os.tmpdir(), framework: 'vue' }),
-    /react or angular/,
+    /react, angular, svelte, astro/,
   )
 })
 

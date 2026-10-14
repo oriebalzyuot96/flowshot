@@ -1,4 +1,6 @@
-export type Framework = 'react' | 'angular'
+export const FRAMEWORKS = ['react', 'angular', 'svelte', 'astro'] as const
+
+export type Framework = (typeof FRAMEWORKS)[number]
 
 export type Shape =
   | { kind: 'string' }
