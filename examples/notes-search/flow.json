@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "name": "NotesSearch",
+  "framework": "react",
+  "ignoredCount": 1,
+  "resultCallIndex": 0,
+  "listPath": [
+    "items"
+  ],
+  "formFields": [
+    {
+      "name": "q",
+      "source": "query",
+      "example": "design",
+      "valueKind": "string"
+    }
+  ],
+  "calls": [
+    {
+      "method": "GET",
+      "origin": "https://notes.example",
+      "path": "/api/notes",
+      "status": 200,
+      "timeMs": 84,
+      "functionName": "getNotes",
+      "query": [
+        {
+          "name": "q",
+          "value": "design"
+        }
+      ],
+      "request": null,
+      "response": {
+        "items": [
+          {
+            "id": 1,
+            "title": "Design notes",
+            "updatedAt": "2026-10-01"
+          },
+          {
+            "id": 2,
+            "title": "Empty pad"
+          }
+        ]
+      },
+      "bodyMissing": false
+    }
+  ]
+}

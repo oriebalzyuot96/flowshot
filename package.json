@@ -1,0 +1,28 @@
+{
+  "name": "flowshot",
+  "version": "0.1.0",
+  "description": "Turn one HAR capture into a component and the evidence behind it.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "flowshot": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "typescript": "^5.9.3"
+  }
+}
