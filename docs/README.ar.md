@@ -12,6 +12,9 @@ node dist/cli.js build examples/notes-search.har --out examples/notes-search --n
 
 مثال الملاحظات فيه كوكي وتوكن. الاتنين ما بيننسخوا للمخرجات. طلب `app.js` بينتجاهل. اللي بيبقى: `GET /api/notes?q=design`، ودالة typed، وفورم بحث بيعرض `items`.
 
+
+![نظرة عامة على Flowshot: ملف HAR يدخل، فيحتفظ Flowshot باستدعاءات الواجهة ويزيل الأسرار، ثم يكتب ملفات الدليل ومكوّنًا مكتوب الأنواع.](img/flowshot-overview.svg)
+
 ## الملفات
 
 | الملف | دوره |

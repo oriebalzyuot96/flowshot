@@ -12,6 +12,9 @@ node dist/cli.js build examples/notes-search.har --out examples/notes-search --n
 
 That sample capture contains a session cookie and a bearer token. Neither is copied into the output. The static `app.js` request is ignored. What remains is `GET /api/notes?q=design`, a typed client, and a search form that renders `items`.
 
+
+![Flowshot overview: a HAR export goes in, Flowshot keeps the API calls and removes secrets, and it writes evidence files and a typed component.](docs/img/flowshot-overview.svg)
+
 ## What you get
 
 | File | Role |
