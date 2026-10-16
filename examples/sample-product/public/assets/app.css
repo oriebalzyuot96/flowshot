@@ -1,0 +1,106 @@
+:root {
+  color: #241c16;
+  background: #f3ecdf;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.mark {
+  margin: 0;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0.2rem 0 0.4rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.lead {
+  margin: 0;
+  max-width: 28rem;
+  color: #5c5148;
+}
+
+code {
+  font-family: Consolas, monospace;
+  font-size: 0.92em;
+}
+
+.search {
+  margin-top: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input {
+  flex: 1;
+  border: 1px solid #d9cbb8;
+  background: #fffaf3;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background: #c4552a;
+  color: #fffaf3;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 1.4rem;
+  color: #5c5148;
+}
+
+.results {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.results li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  background: #fffaf3;
+  border-radius: 1rem;
+}
+
+.results strong {
+  display: block;
+}
+
+.results span {
+  color: #5c5148;
+  font-size: 0.85rem;
+}
+
+.price {
+  font-variant-numeric: tabular-nums;
+}

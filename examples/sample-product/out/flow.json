@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "name": "ShelfSearch",
+  "framework": "react",
+  "ignoredCount": 2,
+  "resultCallIndex": 0,
+  "listPath": [
+    "items"
+  ],
+  "formFields": [
+    {
+      "name": "q",
+      "source": "query",
+      "example": "lamp",
+      "valueKind": "string"
+    }
+  ],
+  "calls": [
+    {
+      "method": "GET",
+      "origin": "http://127.0.0.1:4177",
+      "path": "/api/products",
+      "status": 200,
+      "timeMs": 0,
+      "functionName": "getProducts",
+      "query": [
+        {
+          "name": "q",
+          "value": "lamp"
+        }
+      ],
+      "request": null,
+      "response": {
+        "items": [
+          {
+            "id": 1,
+            "title": "Brass desk lamp",
+            "price": 48,
+            "updatedAt": "2026-10-01"
+          },
+          {
+            "id": 2,
+            "title": "Clip lamp",
+            "price": 19
+          }
+        ]
+      },
+      "bodyMissing": false
+    }
+  ]
+}
